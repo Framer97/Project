@@ -1,0 +1,7 @@
+#! /bin/bash
+
+for x in $@
+do
+tail -n +2 $x | gawk '{print $2}' | ./std.py
+done
+
